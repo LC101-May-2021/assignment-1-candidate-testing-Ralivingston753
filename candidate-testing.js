@@ -43,7 +43,7 @@ if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
 }
 
   let percentage = ((grade/5)*100)
-  console.log(`>>> Overall Grade: ${percentage}% (${percentage} of 5 responses correct) <<<`)
+  console.log(`>>> Overall Grade: ${percentage} % (${grade} of 5 responses correct) <<<`)
   if (percentage < 80){
     console.log('>>> Status: FAILED <<<')
   }else{
