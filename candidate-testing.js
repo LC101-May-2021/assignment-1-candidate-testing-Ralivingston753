@@ -37,9 +37,9 @@ function gradeQuiz(candidateAnswers) {
 
     for (let j = 0; j < correctAnswers.length; j++)
 if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
-  grade += 1
+  grade += 1;
 }else{
-  grade += 0
+  grade += 0;
 }
 
   let percentage = ((grade/5)*100)
