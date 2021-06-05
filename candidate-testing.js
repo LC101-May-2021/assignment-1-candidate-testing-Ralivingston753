@@ -36,7 +36,7 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
     for (let j = 0; j < correctAnswers.length; j++)
-if (candidateAnswers[j].toUpperCase() === correctAnswers[j].toUpperCase()) {
+if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
   grade += 1
 }else{
   grade += 0
