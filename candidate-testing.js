@@ -27,7 +27,12 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++)
   candidateAnswers.push (input.question(`${i+1}) ${questions[i]} \nYour Answer: `))+console.log(`Correct Answer: ${correctAnswers[i]}\n`)
   
-
+ for (let j = 0; j < correctAnswers.length; j++)
+if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
+  grade += 1;
+}else{
+  grade += 0;
+}
   
 }
 
@@ -35,15 +40,10 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-    for (let j = 0; j < correctAnswers.length; j++)
-if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
-  grade += 1;
-}else{
-  grade += 0;
-}
+  
 
   let percentage = ((grade/5)*100)
-  console.log(`>>> Overall Grade: ${percentage} % (${grade} of 5 responses correct) <<<`)
+  console.log(`>>> Overall Grade: ${percentage}% (${grade} of 5 responses correct) <<<`)
   if (percentage < 80){
     console.log('>>> Status: FAILED <<<')
   }else{
