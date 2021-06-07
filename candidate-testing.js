@@ -48,7 +48,7 @@ if (candidateAnswers[j].toLowerCase() === correctAnswers[j].toLowerCase()) {
   }else{
     console.log('>>> Status: SUCCESS <<<')
   }
-  return grade;
+  return percentage;
 }
 
 function runProgram() {
